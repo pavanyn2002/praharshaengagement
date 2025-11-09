@@ -128,16 +128,16 @@ h1, h2, h3 {
    =================================== */
 .hero-section {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-alt) 100%);
+    background: linear-gradient(to bottom, #E8E4DC 0%, #F5F3EE 50%, #E8E4DC 100%);
     background-image: url('../assets/images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     overflow: hidden;
+    padding: var(--spacing-xl) var(--spacing-md);
 }
 
 .hero-overlay {
@@ -146,56 +146,162 @@ h1, h2, h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(212, 175, 55, 0.15);
+    background: rgba(250, 246, 240, 0.85);
     z-index: 1;
+}
+
+/* Floral Decorations */
+.floral-decoration {
+    position: absolute;
+    z-index: 2;
+    opacity: 0.6;
+}
+
+.floral-top-right {
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 250px;
+}
+
+.floral-bottom-left {
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     text-align: center;
-    color: var(--color-white);
-    padding: var(--spacing-md);
+    color: var(--color-text);
+    max-width: 700px;
+    padding: var(--spacing-lg);
 }
 
+/* Opening Message */
+.hero-opening {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    color: #3C5A6C;
+    margin-bottom: var(--spacing-lg);
+    text-transform: uppercase;
+}
+
+/* Couple Names */
 .bride-name,
 .groom-name {
     font-family: var(--font-script);
-    font-size: 4.5rem;
-    color: var(--color-secondary);
+    font-size: 5rem;
+    color: #4A7C8C;
     font-weight: 400;
     margin: 0;
-    animation: golden-reveal 1.5s ease-out forwards;
+    line-height: 1;
+    animation: fadeIn 1.5s ease-out forwards;
 }
 
-.heart-separator {
-    font-size: 2rem;
+.name-separator {
+    font-family: var(--font-script);
+    font-size: 3rem;
+    color: #4A7C8C;
     margin: var(--spacing-sm) 0;
-    animation: pulse 2s ease-in-out infinite;
 }
 
-.engagement-text {
-    font-size: 1.25rem;
-    font-weight: 300;
-    margin: var(--spacing-md) 0;
+/* Invitation Text */
+.invitation-text {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 400;
     letter-spacing: 2px;
+    line-height: 1.8;
+    color: #3C5A6C;
+    margin: var(--spacing-lg) 0;
+    text-transform: uppercase;
 }
 
-.engagement-date {
+/* Date Container */
+.date-container {
+    margin: var(--spacing-lg) 0;
+    padding: var(--spacing-md) 0;
+}
+
+.date-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: var(--spacing-xs) 0;
+}
+
+.date-main {
+    margin: var(--spacing-md) 0;
+}
+
+.date-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.date-label {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #3C5A6C;
+    text-transform: uppercase;
+}
+
+.date-label-small {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #3C5A6C;
+    text-transform: uppercase;
+}
+
+.date-number {
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    font-weight: 300;
+    color: #4A7C8C;
+    line-height: 1;
+    margin: 0 var(--spacing-md);
+}
+
+.date-divider {
+    width: 60px;
+    height: 1px;
+    background: #4A7C8C;
+}
+
+/* Venue Details */
+.venue-details {
+    margin-top: var(--spacing-xl);
+}
+
+.venue-name {
+    font-family: var(--font-body);
     font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--color-secondary);
-    margin: var(--spacing-md) 0 var(--spacing-lg);
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #2C4A5C;
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
 }
 
-.scroll-indicator {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    color: var(--color-secondary);
-    animation: bounce 2s ease-in-out infinite;
+.venue-address {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 1.8;
+    color: #3C5A6C;
+    text-transform: uppercase;
 }
 
 /* Floating Petals */
@@ -206,7 +312,7 @@ h1, h2, h3 {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 1;
+    z-index: 2;
 }
 
 .petal {
@@ -221,8 +327,6 @@ h1, h2, h3 {
 .petal-3 { left: 50%; animation-delay: 4s; }
 .petal-4 { left: 70%; animation-delay: 1s; }
 .petal-5 { left: 90%; animation-delay: 3s; }
-
-
 
 /* ===================================
    EVENT DETAILS SECTION
@@ -243,22 +347,32 @@ h1, h2, h3 {
     box-shadow: var(--shadow-md);
 }
 
-.mandala-corner {
+.card-corner {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-    color: var(--color-secondary);
+    font-size: 2rem;
+    color: #D4AF37;
+    line-height: 1;
 }
 
-.mandala-corner::before {
-    content: '✦';
+.corner-tl { 
+    top: -12px; 
+    left: -12px; 
 }
 
-.corner-tl { top: -10px; left: -10px; }
-.corner-tr { top: -10px; right: -10px; }
-.corner-bl { bottom: -10px; left: -10px; }
-.corner-br { bottom: -10px; right: -10px; }
+.corner-tr { 
+    top: -12px; 
+    right: -12px; 
+}
+
+.corner-bl { 
+    bottom: -12px; 
+    left: -12px; 
+}
+
+.corner-br { 
+    bottom: -12px; 
+    right: -12px; 
+}
 
 .event-info {
     text-align: center;
@@ -418,9 +532,60 @@ h1, h2, h3 {
         font-size: 14px;
     }
     
+    .hero-opening {
+        font-size: 0.65rem;
+        letter-spacing: 1px;
+    }
+    
     .bride-name,
     .groom-name {
         font-size: 3rem;
+    }
+    
+    .name-separator {
+        font-size: 2rem;
+    }
+    
+    .invitation-text {
+        font-size: 0.7rem;
+        letter-spacing: 1.5px;
+    }
+    
+    .date-number {
+        font-size: 3.5rem;
+        margin: 0 var(--spacing-sm);
+    }
+    
+    .date-label {
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+    }
+    
+    .date-label-small {
+        font-size: 0.65rem;
+    }
+    
+    .date-divider {
+        width: 40px;
+    }
+    
+    .venue-name {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+    }
+    
+    .venue-address {
+        font-size: 0.65rem;
+    }
+    
+    .floral-top-right {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .floral-bottom-left {
+        width: 120px;
+        height: 120px;
     }
     
     .section-heading {

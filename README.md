@@ -120,6 +120,8 @@ engagement-invitation/
 │   └── animations.css     # Animation definitions
 ├── js/
 │   └── main.js            # Interactive behaviors
+├── netlify.toml           # Netlify deployment config
+├── _redirects             # Netlify redirects
 ├── assets/
 │   ├── images/
 │   │   ├── hero-bg.jpg    # Hero background (REPLACE)
@@ -147,10 +149,18 @@ The website uses these colors (defined in `css/styles.css`):
 4. Select main branch and save
 5. Your site will be live at `https://yourusername.github.io/repo-name`
 
-### Option 2: Netlify (Free)
+### Option 2: Netlify (Free) - Recommended ⭐
 1. Sign up at [netlify.com](https://netlify.com)
-2. Drag and drop your project folder
-3. Get instant deployment with custom domain support
+2. Click "Add new site" → "Deploy manually"
+3. Drag and drop your project folder
+4. Get instant deployment with custom domain support
+5. The included `netlify.toml` file will automatically configure everything
+
+**Or use Netlify CLI:**
+```bash
+npm install -g netlify-cli
+netlify deploy --prod
+```
 
 ### Option 3: Vercel (Free)
 1. Sign up at [vercel.com](https://vercel.com)
