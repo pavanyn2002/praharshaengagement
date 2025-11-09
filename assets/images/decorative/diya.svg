@@ -1,0 +1,13 @@
+<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <!-- Diya base -->
+  <ellipse cx="30" cy="45" rx="20" ry="8" fill="#D4AF37"/>
+  <path d="M 10 45 Q 10 35 30 35 Q 50 35 50 45" fill="#800020"/>
+  
+  <!-- Flame -->
+  <path d="M 30 35 Q 25 25 30 15 Q 35 25 30 35" fill="#FFD700"/>
+  <path d="M 30 30 Q 27 23 30 18 Q 33 23 30 30" fill="#FFA500"/>
+  <ellipse cx="30" cy="30" rx="2" ry="3" fill="#FF6347"/>
+  
+  <!-- Glow -->
+  <circle cx="30" cy="25" r="15" fill="#FFD700" opacity="0.2"/>
+</svg>
